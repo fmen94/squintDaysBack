@@ -2,6 +2,33 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
         /***/ "./$$_lazy_route_resource lazy recursive": 
         /*!******************************************************!*\
@@ -314,7 +341,7 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n\n\n<router-outlet>\n    <form>\n        <div class=\"form-row\">\n            <div class=\"form-group col-md-6\">\n              <label for=\"inputEmail4\">Dias</label>\n              <select class=\"form-control\" id=\"inputEmail4\" [(ngModel)]=\"limit\" name=\"limit\" (change)=\"getData()\">\n                  <option  value=7 >7</option>\n                  <option value=15 >15</option>\n                  <option value=30 >30</option>\n                </select>\n            </div>\n            <div class=\"form-group col-md-6\">\n              <label for=\"inputPassword4\">Periodo</label>\n              <select class=\"form-control\" id=\"inputPassword4\">\n              <!-- <select class=\"form-control\" id=\"inputPassword4\" [(ngModel)]=\"period\" name=\"period\" (change)=\"getData()\"> -->\n                  <option selected value=\"DL\">Diario</option>\n                  <option value=\"WK\">Semanal</option>\n                  <option value=\"MT\">Mensual</option>\n                  <option value=\"YR\">Anual</option>\n                </select>\n            </div>\n          </div>\n      </form>\n    <div class=\"withtable\">\n  <table class=\"table table-hover dropTable\" *ngIf=\"commons\" >\n    <thead class=\"thead-dark \">\n      <tr>\n        <th scope=\"col\" *ngFor=\"let key of days\" >{{key}}</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let e of commons\">\n        <td *ngFor=\"let key of objectKeys(e)\" >{{ e[key] }}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n</router-outlet>");
+            /* harmony default export */ __webpack_exports__["default"] = ("\n\n\n<router-outlet>\n    <form>\n        <div class=\"form-row\">\n            <div class=\"form-group col-md-6\">\n              <label for=\"inputEmail4\">Dias</label>\n              <select class=\"form-control\" id=\"inputEmail4\" [(ngModel)]=\"limit\" name=\"limit\" (change)=\"update()\">\n                  <option  value=7 >7</option>\n                  <option value=15 >15</option>\n                  <option value=30 >30</option>\n                </select>\n            </div>\n            <div class=\"col\">\n            <label for=\"inputid\">Id de la Pagina</label>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Facebook Id\" id=\"inputid\" [(ngModel)]=\"idFace\" name=\"idFace\" (change)=\"getData()\"  >\n          </div>\n            <div class=\"form-group col-md-6\">\n              <label for=\"inputPassword4\">Periodo</label>\n              <select class=\"form-control\" id=\"inputPassword4\">\n              <!-- <select class=\"form-control\" id=\"inputPassword4\" [(ngModel)]=\"period\" name=\"period\" (change)=\"getData()\"> -->\n                  <option selected value=\"DL\">Diario</option>\n                  <option value=\"WK\">Semanal</option>\n                  <option value=\"MT\">Mensual</option>\n                  <option value=\"YR\">Anual</option>\n                </select>\n            </div>\n          </div>\n      </form>\n    <div class=\"withtable\">\n  <table class=\"table table-hover dropTable\" *ngIf=\"Data\" >\n    <thead class=\"thead-dark \">\n      <tr>\n        <th scope=\"col\" *ngFor=\"let key of days\" >{{key}}</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let e of Data\">\n        <td *ngFor=\"let key of objectKeys(e)\" >{{ e[key] || true }}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n</router-outlet>");
             /***/ 
         }),
         /***/ "./node_modules/tslib/tslib.es6.js": 
@@ -651,7 +678,7 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = (".dropTable{\n    width: auto;\n    text-align: center;\n    margin: auto;\n    background-color: Gainsboro  ;\n    border-radius: 10px;\n}\nform{\n    width: 80%;\n    margin-top: 2%;\n    margin-left: 10%;\n    background-color: Gainsboro  ;\n    border-radius: 10px;\n    padding-left: 10%;\n    padding-top: 1% ;\n    padding-bottom: 1%;\n}\n.withtable{\n    margin-top: 2%;\n}\n.thead-dark{\n    width: 100%;\n}\nselect{\n    width: 50%;\n\n}\n@media screen and (max-width: 600px) {\n    table {\n        width:100%;\n    }\n    thead {\n        display: none;\n    }\n    tr:nth-of-type(2n) {\n        background-color: inherit;\n    }\n    tr td:first-child {\n        background: #f0f0f0;\n        font-weight:bold;\n        font-size:1.3em;\n    }\n    tbody td {\n        display: block;\n        text-align:center;\n    }\n    tbody td:before {\n        content: attr(data-th);\n        display: block;\n        text-align:center;\n    }\n}\n@media screen and (max-width: 320px) {\n    table {\n      display: block;\n      overflow-x: auto;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWiw2QkFBNkI7SUFDN0IsbUJBQW1CO0FBQ3ZCO0FBQ0E7SUFDSSxVQUFVO0lBQ1YsY0FBYztJQUNkLGdCQUFnQjtJQUNoQiw2QkFBNkI7SUFDN0IsbUJBQW1CO0lBQ25CLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIsa0JBQWtCO0FBQ3RCO0FBRUE7SUFDSSxjQUFjO0FBQ2xCO0FBQ0E7SUFDSSxXQUFXO0FBQ2Y7QUFFQTtJQUNJLFVBQVU7O0FBRWQ7QUFDQTtJQUNJO1FBQ0ksVUFBVTtJQUNkO0lBQ0E7UUFDSSxhQUFhO0lBQ2pCO0lBQ0E7UUFDSSx5QkFBeUI7SUFDN0I7SUFDQTtRQUNJLG1CQUFtQjtRQUNuQixnQkFBZ0I7UUFDaEIsZUFBZTtJQUNuQjtJQUNBO1FBQ0ksY0FBYztRQUNkLGlCQUFpQjtJQUNyQjtJQUNBO1FBQ0ksc0JBQXNCO1FBQ3RCLGNBQWM7UUFDZCxpQkFBaUI7SUFDckI7QUFDSjtBQUNBO0lBQ0k7TUFDRSxjQUFjO01BQ2QsZ0JBQWdCO0lBQ2xCO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kcm9wVGFibGV7XG4gICAgd2lkdGg6IGF1dG87XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbjogYXV0bztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBHYWluc2Jvcm8gIDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xufVxuZm9ybXtcbiAgICB3aWR0aDogODAlO1xuICAgIG1hcmdpbi10b3A6IDIlO1xuICAgIG1hcmdpbi1sZWZ0OiAxMCU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogR2FpbnNib3JvICA7XG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDEwJTtcbiAgICBwYWRkaW5nLXRvcDogMSUgO1xuICAgIHBhZGRpbmctYm90dG9tOiAxJTtcbn1cblxuLndpdGh0YWJsZXtcbiAgICBtYXJnaW4tdG9wOiAyJTtcbn1cbi50aGVhZC1kYXJre1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG5zZWxlY3R7XG4gICAgd2lkdGg6IDUwJTtcblxufVxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgICB0YWJsZSB7XG4gICAgICAgIHdpZHRoOjEwMCU7XG4gICAgfVxuICAgIHRoZWFkIHtcbiAgICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG4gICAgdHI6bnRoLW9mLXR5cGUoMm4pIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogaW5oZXJpdDtcbiAgICB9XG4gICAgdHIgdGQ6Zmlyc3QtY2hpbGQge1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuICAgICAgICBmb250LXdlaWdodDpib2xkO1xuICAgICAgICBmb250LXNpemU6MS4zZW07XG4gICAgfVxuICAgIHRib2R5IHRkIHtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIHRleHQtYWxpZ246Y2VudGVyO1xuICAgIH1cbiAgICB0Ym9keSB0ZDpiZWZvcmUge1xuICAgICAgICBjb250ZW50OiBhdHRyKGRhdGEtdGgpO1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgdGV4dC1hbGlnbjpjZW50ZXI7XG4gICAgfVxufVxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogMzIwcHgpIHtcbiAgICB0YWJsZSB7XG4gICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgIG92ZXJmbG93LXg6IGF1dG87XG4gICAgfVxufSJdfQ== */");
+            /* harmony default export */ __webpack_exports__["default"] = (".dropTable{\n    width: auto;\n    text-align: center;\n    margin: auto;\n    background-color: Gainsboro  ;\n    border-radius: 10px;\n    margin-bottom: 1%;\n}\nform{\n    width: 90%;\n    margin-top: 2%;\n    margin-left: 5%;\n    background-color: Gainsboro  ;\n    border-radius: 10px;\n    padding-left: 10%;\n    padding-top: 1% ;\n    padding-bottom: 1%;\n}\n.withtable{\n    margin-top: 2%;\n}\n.thead-dark{\n    width: 100%;\n}\nselect{\n    width: 50%;\n\n}\n.form-control{\n    width: auto !important;\n}\n@media screen and (max-width: 600px) {\n    table {\n        width:100%;\n    }\n    thead {\n        display: none;\n    }\n    tr:nth-of-type(2n) {\n        background-color: inherit;\n    }\n    tr td:first-child {\n        background: #f0f0f0;\n        font-weight:bold;\n        font-size:1.3em;\n    }\n    tbody td {\n        display: block;\n        text-align:center;\n    }\n    tbody td:before {\n        content: attr(data-th);\n        display: block;\n        text-align:center;\n    }\n}\n@media screen and (max-width: 320px) {\n    table {\n      display: block;\n      overflow-x: auto;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWiw2QkFBNkI7SUFDN0IsbUJBQW1CO0lBQ25CLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksVUFBVTtJQUNWLGNBQWM7SUFDZCxlQUFlO0lBQ2YsNkJBQTZCO0lBQzdCLG1CQUFtQjtJQUNuQixpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksY0FBYztBQUNsQjtBQUNBO0lBQ0ksV0FBVztBQUNmO0FBRUE7SUFDSSxVQUFVOztBQUVkO0FBQ0E7SUFDSSxzQkFBc0I7QUFDMUI7QUFDQTtJQUNJO1FBQ0ksVUFBVTtJQUNkO0lBQ0E7UUFDSSxhQUFhO0lBQ2pCO0lBQ0E7UUFDSSx5QkFBeUI7SUFDN0I7SUFDQTtRQUNJLG1CQUFtQjtRQUNuQixnQkFBZ0I7UUFDaEIsZUFBZTtJQUNuQjtJQUNBO1FBQ0ksY0FBYztRQUNkLGlCQUFpQjtJQUNyQjtJQUNBO1FBQ0ksc0JBQXNCO1FBQ3RCLGNBQWM7UUFDZCxpQkFBaUI7SUFDckI7QUFDSjtBQUNBO0lBQ0k7TUFDRSxjQUFjO01BQ2QsZ0JBQWdCO0lBQ2xCO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kcm9wVGFibGV7XG4gICAgd2lkdGg6IGF1dG87XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbjogYXV0bztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBHYWluc2Jvcm8gIDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIG1hcmdpbi1ib3R0b206IDElO1xufVxuZm9ybXtcbiAgICB3aWR0aDogOTAlO1xuICAgIG1hcmdpbi10b3A6IDIlO1xuICAgIG1hcmdpbi1sZWZ0OiA1JTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBHYWluc2Jvcm8gIDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIHBhZGRpbmctbGVmdDogMTAlO1xuICAgIHBhZGRpbmctdG9wOiAxJSA7XG4gICAgcGFkZGluZy1ib3R0b206IDElO1xufVxuXG4ud2l0aHRhYmxle1xuICAgIG1hcmdpbi10b3A6IDIlO1xufVxuLnRoZWFkLWRhcmt7XG4gICAgd2lkdGg6IDEwMCU7XG59XG5cbnNlbGVjdHtcbiAgICB3aWR0aDogNTAlO1xuXG59XG4uZm9ybS1jb250cm9se1xuICAgIHdpZHRoOiBhdXRvICFpbXBvcnRhbnQ7XG59XG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xuICAgIHRhYmxlIHtcbiAgICAgICAgd2lkdGg6MTAwJTtcbiAgICB9XG4gICAgdGhlYWQge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH1cbiAgICB0cjpudGgtb2YtdHlwZSgybikge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBpbmhlcml0O1xuICAgIH1cbiAgICB0ciB0ZDpmaXJzdC1jaGlsZCB7XG4gICAgICAgIGJhY2tncm91bmQ6ICNmMGYwZjA7XG4gICAgICAgIGZvbnQtd2VpZ2h0OmJvbGQ7XG4gICAgICAgIGZvbnQtc2l6ZToxLjNlbTtcbiAgICB9XG4gICAgdGJvZHkgdGQge1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgdGV4dC1hbGlnbjpjZW50ZXI7XG4gICAgfVxuICAgIHRib2R5IHRkOmJlZm9yZSB7XG4gICAgICAgIGNvbnRlbnQ6IGF0dHIoZGF0YS10aCk7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICB0ZXh0LWFsaWduOmNlbnRlcjtcbiAgICB9XG59XG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAzMjBweCkge1xuICAgIHRhYmxlIHtcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgb3ZlcmZsb3cteDogYXV0bztcbiAgICB9XG59Il19 */");
             /***/ 
         }),
         /***/ "./src/app/app.component.ts": 
@@ -670,28 +697,73 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
             /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/ __webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
             /* harmony import */ var _querys_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./querys/common */ "./src/app/querys/common.ts");
             /* harmony import */ var _transformations_comonGraph_transformations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./transformations/comonGraph.transformations */ "./src/app/transformations/comonGraph.transformations.ts");
+            /* harmony import */ var _querys_community__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./querys/community */ "./src/app/querys/community.ts");
+            /* harmony import */ var _querys_investmet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./querys/investmet */ "./src/app/querys/investmet.ts");
+            /* harmony import */ var _querys_affinty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./querys/affinty */ "./src/app/querys/affinty.ts");
+            /* harmony import */ var _querys_conversation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./querys/conversation */ "./src/app/querys/conversation.ts");
             var AppComponent = /** @class */ (function () {
                 function AppComponent(apollo) {
                     this.apollo = apollo;
                     this.limit = 7;
                     this.period = "DL";
+                    this.idFace = "534334316747920";
                     this.objectKeys = Object.keys;
                 }
+                AppComponent.prototype.trasnsfomData = function () {
+                    this.Data = Object(_transformations_comonGraph_transformations__WEBPACK_IMPORTED_MODULE_5__["transGraph"])(Object.assign(this.commons, this.community, this.investment, this.affinity, this.conversation), this.limit);
+                    this.days = this.Data[0];
+                    this.Data.shift();
+                };
+                AppComponent.prototype.update = function () {
+                    this.getData();
+                };
                 AppComponent.prototype.getData = function () {
-                    var _this = this;
-                    this.apollo
-                        .watchQuery({ query: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a(__makeTemplateObject(["", ""], ["", ""]), Object(_querys_common__WEBPACK_IMPORTED_MODULE_4__["common"])(this.limit, this.period)) })
-                        .valueChanges.subscribe(function (res) {
-                        var result = res;
-                        _this.commons = Object(_transformations_comonGraph_transformations__WEBPACK_IMPORTED_MODULE_5__["transGraph"])(result.data.pulse.facebook.common, _this.limit);
-                        _this.days = _this.commons[0];
-                        _this.commons.shift();
-                        console.log(_this.commons);
-                        console.log(_this.days);
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+                        var _this = this;
+                        return __generator(this, function (_a) {
+                            switch (_a.label) {
+                                case 0: return [4 /*yield*/, this.apollo.query({ query: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a(__makeTemplateObject(["", ""], ["", ""]), Object(_querys_common__WEBPACK_IMPORTED_MODULE_4__["common"])(this.limit, this.period)), context: { headers: { "idface": "" + this.idFace } } })
+                                        .subscribe(function (res) {
+                                        var result = res;
+                                        _this.commons = result.data.pulse.facebook.common;
+                                        _this.trasnsfomData();
+                                    })];
+                                case 1:
+                                    _a.sent();
+                                    return [4 /*yield*/, this.apollo.query({ query: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a(__makeTemplateObject(["", ""], ["", ""]), Object(_querys_community__WEBPACK_IMPORTED_MODULE_6__["community"])(this.limit, this.period)), context: { headers: { "idface": "" + this.idFace } } })
+                                            .subscribe(function (res) {
+                                            var result = res;
+                                            _this.community = result.data.pulse.facebook.community;
+                                        })];
+                                case 2:
+                                    _a.sent();
+                                    return [4 /*yield*/, this.apollo.query({ query: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a(__makeTemplateObject(["", ""], ["", ""]), Object(_querys_investmet__WEBPACK_IMPORTED_MODULE_7__["investment"])(this.limit, this.period)), context: { headers: { "idface": "" + this.idFace } } })
+                                            .subscribe(function (res) {
+                                            var result = res;
+                                            _this.investment = result.data.pulse.facebook.investmentReturn;
+                                        })];
+                                case 3:
+                                    _a.sent();
+                                    return [4 /*yield*/, this.apollo.query({ query: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a(__makeTemplateObject(["", ""], ["", ""]), Object(_querys_affinty__WEBPACK_IMPORTED_MODULE_8__["affinity"])(this.limit, this.period)), context: { headers: { "idface": "" + this.idFace } } })
+                                            .subscribe(function (res) {
+                                            var result = res;
+                                            _this.affinity = result.data.pulse.facebook.affinity;
+                                        })];
+                                case 4:
+                                    _a.sent();
+                                    return [4 /*yield*/, this.apollo.query({ query: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a(__makeTemplateObject(["", ""], ["", ""]), Object(_querys_conversation__WEBPACK_IMPORTED_MODULE_9__["conversation"])(this.limit, this.period)), context: { headers: { "idface": "" + this.idFace } } })
+                                            .subscribe(function (res) {
+                                            var result = res;
+                                            _this.conversation = result.data.pulse.facebook.conversation;
+                                        })];
+                                case 5:
+                                    _a.sent();
+                                    return [2 /*return*/];
+                            }
+                        });
                     });
                 };
                 AppComponent.prototype.ngOnInit = function () {
-                    console.log(graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a(__makeTemplateObject(["", ""], ["", ""]), Object(_querys_common__WEBPACK_IMPORTED_MODULE_4__["common"])(this.limit, this.period)));
                     this.getData();
                 };
                 return AppComponent;
@@ -728,6 +800,14 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
             /* harmony import */ var apollo_angular_link_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! apollo-angular-link-http */ "./node_modules/apollo-angular-link-http/fesm2015/ngApolloLinkHttp.js");
             /* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! apollo-cache-inmemory */ "./node_modules/apollo-cache-inmemory/lib/bundle.esm.js");
             /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+            /* harmony import */ var apollo_link_context__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! apollo-link-context */ "./node_modules/apollo-link-context/lib/bundle.esm.js");
+            var authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_11__["setContext"])(function (_, _a) {
+                var headers = _a.headers;
+                var idface = localStorage.getItem('idface');
+                return {
+                    headers: Object.assign({}, headers)
+                };
+            });
             var AppModule = /** @class */ (function () {
                 function AppModule() {
                 }
@@ -750,9 +830,9 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
                             useFactory: function (httpLink) {
                                 return {
                                     cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_9__["InMemoryCache"](),
-                                    link: httpLink.create({
+                                    link: authLink.concat(httpLink.create({
                                         uri: "https://graph.squintboard.com/"
-                                    })
+                                    }))
                                 };
                             },
                             deps: [apollo_angular_link_http__WEBPACK_IMPORTED_MODULE_8__["HttpLink"]]
@@ -777,7 +857,7 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
             /* harmony import */ var apollo_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-angular */ "./node_modules/apollo-angular/fesm2015/ngApollo.js");
             /* harmony import */ var apollo_angular_link_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-angular-link-http */ "./node_modules/apollo-angular-link-http/fesm2015/ngApolloLinkHttp.js");
             /* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! apollo-cache-inmemory */ "./node_modules/apollo-cache-inmemory/lib/bundle.esm.js");
-            var uri = ''; // <-- add the URL of the GraphQL server here
+            var uri = 'https://graph.squintboard.com/'; // <-- add the URL of the GraphQL server here
             function createApollo(httpLink) {
                 return {
                     link: httpLink.create({ uri: uri }),
@@ -803,6 +883,27 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
             ], GraphQLModule);
             /***/ 
         }),
+        /***/ "./src/app/querys/affinty.ts": 
+        /*!***********************************!*\
+          !*** ./src/app/querys/affinty.ts ***!
+          \***********************************/
+        /*! exports provided: affinity */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "affinity", function () { return affinity; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+            /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+            var affinity = function (limit, period) {
+                if (limit === void 0) { limit = 7; }
+                if (period === void 0) { period = "DL"; }
+                var end = moment__WEBPACK_IMPORTED_MODULE_1__().format('MM/DD/YYYY');
+                var start = moment__WEBPACK_IMPORTED_MODULE_1__().subtract(limit, 'days').format("MM/DD/YYYY");
+                return "\nquery{\n  pulse{\n    facebook{\n       affinity{\n        shares{\n          date\n          value\n        }\n        postPerformanceRatio(limit:" + limit + " period: " + period + "){\n          date\n          value\n        }\n        reactionsCount(limit:" + limit + " period: " + period + "){\n          date\n          value\n        }\n        clicks(limit:" + limit + " period: " + period + "){\n          date\n          value\n        }\n        videoViewsEvolution(limit:" + limit + " period: " + period + "){\n          date\n          value\n        } \n      }\n    }\n  }\n}";
+            };
+            /***/ 
+        }),
         /***/ "./src/app/querys/common.ts": 
         /*!**********************************!*\
           !*** ./src/app/querys/common.ts ***!
@@ -820,7 +921,70 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
                 if (period === void 0) { period = "DL"; }
                 var end = moment__WEBPACK_IMPORTED_MODULE_1__().format('MM/DD/YYYY');
                 var start = moment__WEBPACK_IMPORTED_MODULE_1__().subtract(limit, 'days').format("MM/DD/YYYY");
-                return "\nquery{\n    pulse{\n      facebook{\n         common{\n          engagedUser(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementRate(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          reach(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          fans(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          impressionsTotal(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          impressionsPaid(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          impressionsOrganic(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          impressionsViral(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementTotal(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementPaid(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementOrganic(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementViral(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          investment(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          comments(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n        }\n      }\n    }\n  }\n\n";
+                return "\nquery{\n    pulse{\n      facebook{\n         common{\n          sentiment(dateStartEnd:{start:\"" + start + "\",end:\"" + end + "\"}){\n            date\n            bad\n            good\n            neutral\n          }\n          engagedUser(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementRate(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          reach(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          fans(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          impressionsTotal(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          impressionsPaid(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          impressionsOrganic(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          impressionsViral(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementTotal(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementPaid(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementOrganic(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          engagementViral(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          investment(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n          comments(limit:" + limit + " period: " + period + "){\n            date\n            value\n          }\n        }\n      }\n    }\n  }\n\n";
+            };
+            /***/ 
+        }),
+        /***/ "./src/app/querys/community.ts": 
+        /*!*************************************!*\
+          !*** ./src/app/querys/community.ts ***!
+          \*************************************/
+        /*! exports provided: community */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "community", function () { return community; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+            /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+            var community = function (limit, period) {
+                if (limit === void 0) { limit = 7; }
+                if (period === void 0) { period = "DL"; }
+                var end = moment__WEBPACK_IMPORTED_MODULE_1__().format('MM/DD/YYYY');
+                var start = moment__WEBPACK_IMPORTED_MODULE_1__().subtract(limit, 'days').format("MM/DD/YYYY");
+                return "\nquery {\n  pulse {\n    facebook {\n      community {\n        viralFans(limit:" + limit + " period: " + period + ") {\n          date\n          value\n        }\n        organicFans(limit:" + limit + " period: " + period + ") {\n          date\n          value\n        }\n        paidFans(limit:" + limit + " period: " + period + ") {\n          date\n          value\n        }\n      }\n    }\n  }\n}\n";
+            };
+            /***/ 
+        }),
+        /***/ "./src/app/querys/conversation.ts": 
+        /*!****************************************!*\
+          !*** ./src/app/querys/conversation.ts ***!
+          \****************************************/
+        /*! exports provided: conversation */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "conversation", function () { return conversation; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+            /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+            var conversation = function (limit, period) {
+                if (limit === void 0) { limit = 7; }
+                if (period === void 0) { period = "DL"; }
+                var end = moment__WEBPACK_IMPORTED_MODULE_1__().format('MM/DD/YYYY');
+                var start = moment__WEBPACK_IMPORTED_MODULE_1__().subtract(limit, 'days').format("MM/DD/YYYY");
+                return "\nquery{\n  pulse{\n    facebook{\n       conversation{\n      privateMessages(limit:" + limit + " period: " + period + "){\n        date\n        value\n      }\n      }\n    }\n  }\n}\n";
+            };
+            /***/ 
+        }),
+        /***/ "./src/app/querys/investmet.ts": 
+        /*!*************************************!*\
+          !*** ./src/app/querys/investmet.ts ***!
+          \*************************************/
+        /*! exports provided: investment */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "investment", function () { return investment; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+            /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+            var investment = function (limit, period) {
+                if (limit === void 0) { limit = 7; }
+                if (period === void 0) { period = "DL"; }
+                var end = moment__WEBPACK_IMPORTED_MODULE_1__().format('MM/DD/YYYY');
+                var start = moment__WEBPACK_IMPORTED_MODULE_1__().subtract(limit, 'days').format("MM/DD/YYYY");
+                return "\nquery {\n  pulse {\n    facebook {\n     investmentReturn{\n        campaignFrequency(limit:" + limit + " period: " + period + "){\n          date\n          value\n        }\n        campaignReach(limit:" + limit + " period: " + period + "){\n          date\n          value\n        }\n        relevanceScore(limit:" + limit + " period: " + period + "){\n          date\n          value\n        }\n        campaignCtr(limit:" + limit + " period: " + period + "){\n          date\n          value\n        }\n      }\n    }\n  }\n}\n\n";
             };
             /***/ 
         }),
