@@ -318,7 +318,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n\n<router-outlet>\n    <form>\n        <div class=\"form-row\">\n            <div class=\"form-group col-md-6\">\n              <label for=\"inputEmail4\">Dias</label>\n              <select class=\"form-control\" id=\"inputEmail4\" [(ngModel)]=\"limit\" name=\"limit\" (change)=\"update()\">\n                  <option  value=7 >7</option>\n                  <option value=15 >15</option>\n                  <option value=30 >30</option>\n                </select>\n            </div>\n            <div class=\"col\">\n            <label for=\"inputid\">Id de la Pagina</label>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Facebook Id\" id=\"inputid\" [(ngModel)]=\"idFace\" name=\"idFace\" (change)=\"getData()\"  >\n          </div>\n            <div class=\"form-group col-md-6\">\n              <label for=\"inputPassword4\">Periodo</label>\n              <select class=\"form-control\" id=\"inputPassword4\">\n              <!-- <select class=\"form-control\" id=\"inputPassword4\" [(ngModel)]=\"period\" name=\"period\" (change)=\"getData()\"> -->\n                  <option selected value=\"DL\">Diario</option>\n                  <option value=\"WK\">Semanal</option>\n                  <option value=\"MT\">Mensual</option>\n                  <option value=\"YR\">Anual</option>\n                </select>\n            </div>\n          </div>\n      </form>\n    <div class=\"withtable\">\n  <table class=\"table table-hover dropTable\" *ngIf=\"Data\" >\n    <thead class=\"thead-dark \">\n      <tr>\n        <th scope=\"col\" *ngFor=\"let key of days\" >{{key}}</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let e of Data\">\n        <td *ngFor=\"let key of objectKeys(e)\" >{{ e[key] || true }}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n</router-outlet>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n\n<router-outlet>\n    <form>\n        <div class=\"form-row\">\n            <div class=\"form-group col-md-6\">\n              <label for=\"inputEmail4\">Dias</label>\n              <select class=\"form-control\" id=\"inputEmail4\" [(ngModel)]=\"limit\" name=\"limit\" (change)=\"update()\">\n                  <option  value=7 >7</option>\n                  <option value=15 >15</option>\n                  <option value=30 >30</option>\n                </select>\n            </div>\n            <div class=\"col\">\n            <label for=\"inputid\">Id de la Pagina</label>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Facebook Id\" id=\"inputid\" [(ngModel)]=\"idFace\" name=\"idFace\" (change)=\"getData()\"  >\n          </div>\n            <div class=\"form-group col-md-6\">\n              <label for=\"inputPassword4\">Periodo</label>\n              <select class=\"form-control\" id=\"inputPassword4\">\n              <!-- <select class=\"form-control\" id=\"inputPassword4\" [(ngModel)]=\"period\" name=\"period\" (change)=\"getData()\"> -->\n                  <option selected value=\"DL\">Diario</option>\n                  <option value=\"WK\">Semanal</option>\n                  <option value=\"MT\">Mensual</option>\n                  <option value=\"YR\">Anual</option>\n                </select>\n            </div>\n          </div>\n      </form>\n          <canvas id=\"myChart\" width=\"700\" height=\"400\" ></canvas>\n      \n     \n    <div class=\"withtable\">\n  <table class=\"table table-hover dropTable\" *ngIf=\"Data\" >\n    <thead class=\"thead-dark \">\n      <tr>\n        <th scope=\"col\" *ngFor=\"let key of days\" >{{key}}</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let e of Data; let i = index\">\n        <td *ngFor=\"let key of objectKeys(e)\" (click)=\"getChart(i)\" >{{ e[key] || true }}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n</router-outlet>");
 
 /***/ }),
 
@@ -590,7 +590,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".dropTable{\n    width: auto;\n    text-align: center;\n    margin: auto;\n    background-color: Gainsboro  ;\n    border-radius: 10px;\n    margin-bottom: 1%;\n}\nform{\n    width: 90%;\n    margin-top: 2%;\n    margin-left: 5%;\n    background-color: Gainsboro  ;\n    border-radius: 10px;\n    padding-left: 10%;\n    padding-top: 1% ;\n    padding-bottom: 1%;\n}\n.withtable{\n    margin-top: 2%;\n}\n.thead-dark{\n    width: 100%;\n}\nselect{\n    width: 50%;\n\n}\n.form-control{\n    width: auto !important;\n}\n@media screen and (max-width: 600px) {\n    table {\n        width:100%;\n    }\n    thead {\n        display: none;\n    }\n    tr:nth-of-type(2n) {\n        background-color: inherit;\n    }\n    tr td:first-child {\n        background: #f0f0f0;\n        font-weight:bold;\n        font-size:1.3em;\n    }\n    tbody td {\n        display: block;\n        text-align:center;\n    }\n    tbody td:before {\n        content: attr(data-th);\n        display: block;\n        text-align:center;\n    }\n}\n@media screen and (max-width: 320px) {\n    table {\n      display: block;\n      overflow-x: auto;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWiw2QkFBNkI7SUFDN0IsbUJBQW1CO0lBQ25CLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksVUFBVTtJQUNWLGNBQWM7SUFDZCxlQUFlO0lBQ2YsNkJBQTZCO0lBQzdCLG1CQUFtQjtJQUNuQixpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksY0FBYztBQUNsQjtBQUNBO0lBQ0ksV0FBVztBQUNmO0FBRUE7SUFDSSxVQUFVOztBQUVkO0FBQ0E7SUFDSSxzQkFBc0I7QUFDMUI7QUFDQTtJQUNJO1FBQ0ksVUFBVTtJQUNkO0lBQ0E7UUFDSSxhQUFhO0lBQ2pCO0lBQ0E7UUFDSSx5QkFBeUI7SUFDN0I7SUFDQTtRQUNJLG1CQUFtQjtRQUNuQixnQkFBZ0I7UUFDaEIsZUFBZTtJQUNuQjtJQUNBO1FBQ0ksY0FBYztRQUNkLGlCQUFpQjtJQUNyQjtJQUNBO1FBQ0ksc0JBQXNCO1FBQ3RCLGNBQWM7UUFDZCxpQkFBaUI7SUFDckI7QUFDSjtBQUNBO0lBQ0k7TUFDRSxjQUFjO01BQ2QsZ0JBQWdCO0lBQ2xCO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kcm9wVGFibGV7XG4gICAgd2lkdGg6IGF1dG87XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbjogYXV0bztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBHYWluc2Jvcm8gIDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIG1hcmdpbi1ib3R0b206IDElO1xufVxuZm9ybXtcbiAgICB3aWR0aDogOTAlO1xuICAgIG1hcmdpbi10b3A6IDIlO1xuICAgIG1hcmdpbi1sZWZ0OiA1JTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBHYWluc2Jvcm8gIDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIHBhZGRpbmctbGVmdDogMTAlO1xuICAgIHBhZGRpbmctdG9wOiAxJSA7XG4gICAgcGFkZGluZy1ib3R0b206IDElO1xufVxuXG4ud2l0aHRhYmxle1xuICAgIG1hcmdpbi10b3A6IDIlO1xufVxuLnRoZWFkLWRhcmt7XG4gICAgd2lkdGg6IDEwMCU7XG59XG5cbnNlbGVjdHtcbiAgICB3aWR0aDogNTAlO1xuXG59XG4uZm9ybS1jb250cm9se1xuICAgIHdpZHRoOiBhdXRvICFpbXBvcnRhbnQ7XG59XG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge1xuICAgIHRhYmxlIHtcbiAgICAgICAgd2lkdGg6MTAwJTtcbiAgICB9XG4gICAgdGhlYWQge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH1cbiAgICB0cjpudGgtb2YtdHlwZSgybikge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBpbmhlcml0O1xuICAgIH1cbiAgICB0ciB0ZDpmaXJzdC1jaGlsZCB7XG4gICAgICAgIGJhY2tncm91bmQ6ICNmMGYwZjA7XG4gICAgICAgIGZvbnQtd2VpZ2h0OmJvbGQ7XG4gICAgICAgIGZvbnQtc2l6ZToxLjNlbTtcbiAgICB9XG4gICAgdGJvZHkgdGQge1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgdGV4dC1hbGlnbjpjZW50ZXI7XG4gICAgfVxuICAgIHRib2R5IHRkOmJlZm9yZSB7XG4gICAgICAgIGNvbnRlbnQ6IGF0dHIoZGF0YS10aCk7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICB0ZXh0LWFsaWduOmNlbnRlcjtcbiAgICB9XG59XG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAzMjBweCkge1xuICAgIHRhYmxlIHtcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgb3ZlcmZsb3cteDogYXV0bztcbiAgICB9XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".dropTable{\n    width: auto;\n    text-align: center;\n    margin: auto;\n    background-color: Gainsboro  ;\n    border-radius: 10px;\n    margin-bottom: 1%;\n}\nform{\n    width: 90%;\n    margin-top: 2%;\n    margin-left: 5%;\n    background-color: Gainsboro  ;\n    border-radius: 10px;\n    padding-left: 10%;\n    padding-top: 1% ;\n    padding-bottom: 1%;\n}\n.withtable{\n    margin-top: 2%;\n}\n.thead-dark{\n    width: 100%;\n}\nselect{\n    width: 50%;\n\n}\n.form-control{\n    width: auto !important;\n}\n#myChart{\n    display:block;\n    margin:auto;\n}\n@media screen and (max-width: 600px) {\n    table {\n        width:100%;\n    }\n    thead {\n        display: none;\n    }\n    tr:nth-of-type(2n) {\n        background-color: inherit;\n    }\n    tr td:first-child {\n        background: #f0f0f0;\n        font-weight:bold;\n        font-size:1.3em;\n    }\n    tbody td {\n        display: block;\n        text-align:center;\n    }\n    tbody td:before {\n        content: attr(data-th);\n        display: block;\n        text-align:center;\n    }\n}\n@media screen and (max-width: 320px) {\n    table {\n      display: block;\n      overflow-x: auto;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWiw2QkFBNkI7SUFDN0IsbUJBQW1CO0lBQ25CLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksVUFBVTtJQUNWLGNBQWM7SUFDZCxlQUFlO0lBQ2YsNkJBQTZCO0lBQzdCLG1CQUFtQjtJQUNuQixpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksY0FBYztBQUNsQjtBQUNBO0lBQ0ksV0FBVztBQUNmO0FBRUE7SUFDSSxVQUFVOztBQUVkO0FBQ0E7SUFDSSxzQkFBc0I7QUFDMUI7QUFDQTtJQUNJLGFBQWE7SUFDYixXQUFXO0FBQ2Y7QUFDQTtJQUNJO1FBQ0ksVUFBVTtJQUNkO0lBQ0E7UUFDSSxhQUFhO0lBQ2pCO0lBQ0E7UUFDSSx5QkFBeUI7SUFDN0I7SUFDQTtRQUNJLG1CQUFtQjtRQUNuQixnQkFBZ0I7UUFDaEIsZUFBZTtJQUNuQjtJQUNBO1FBQ0ksY0FBYztRQUNkLGlCQUFpQjtJQUNyQjtJQUNBO1FBQ0ksc0JBQXNCO1FBQ3RCLGNBQWM7UUFDZCxpQkFBaUI7SUFDckI7QUFDSjtBQUNBO0lBQ0k7TUFDRSxjQUFjO01BQ2QsZ0JBQWdCO0lBQ2xCO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kcm9wVGFibGV7XG4gICAgd2lkdGg6IGF1dG87XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbjogYXV0bztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBHYWluc2Jvcm8gIDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIG1hcmdpbi1ib3R0b206IDElO1xufVxuZm9ybXtcbiAgICB3aWR0aDogOTAlO1xuICAgIG1hcmdpbi10b3A6IDIlO1xuICAgIG1hcmdpbi1sZWZ0OiA1JTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBHYWluc2Jvcm8gIDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgIHBhZGRpbmctbGVmdDogMTAlO1xuICAgIHBhZGRpbmctdG9wOiAxJSA7XG4gICAgcGFkZGluZy1ib3R0b206IDElO1xufVxuXG4ud2l0aHRhYmxle1xuICAgIG1hcmdpbi10b3A6IDIlO1xufVxuLnRoZWFkLWRhcmt7XG4gICAgd2lkdGg6IDEwMCU7XG59XG5cbnNlbGVjdHtcbiAgICB3aWR0aDogNTAlO1xuXG59XG4uZm9ybS1jb250cm9se1xuICAgIHdpZHRoOiBhdXRvICFpbXBvcnRhbnQ7XG59XG4jbXlDaGFydHtcbiAgICBkaXNwbGF5OmJsb2NrO1xuICAgIG1hcmdpbjphdXRvO1xufVxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcbiAgICB0YWJsZSB7XG4gICAgICAgIHdpZHRoOjEwMCU7XG4gICAgfVxuICAgIHRoZWFkIHtcbiAgICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG4gICAgdHI6bnRoLW9mLXR5cGUoMm4pIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogaW5oZXJpdDtcbiAgICB9XG4gICAgdHIgdGQ6Zmlyc3QtY2hpbGQge1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuICAgICAgICBmb250LXdlaWdodDpib2xkO1xuICAgICAgICBmb250LXNpemU6MS4zZW07XG4gICAgfVxuICAgIHRib2R5IHRkIHtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIHRleHQtYWxpZ246Y2VudGVyO1xuICAgIH1cbiAgICB0Ym9keSB0ZDpiZWZvcmUge1xuICAgICAgICBjb250ZW50OiBhdHRyKGRhdGEtdGgpO1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgdGV4dC1hbGlnbjpjZW50ZXI7XG4gICAgfVxufVxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogMzIwcHgpIHtcbiAgICB0YWJsZSB7XG4gICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgIG92ZXJmbG93LXg6IGF1dG87XG4gICAgfVxufSJdfQ== */");
 
 /***/ }),
 
@@ -615,6 +615,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _querys_investmet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./querys/investmet */ "./src/app/querys/investmet.ts");
 /* harmony import */ var _querys_affinty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./querys/affinty */ "./src/app/querys/affinty.ts");
 /* harmony import */ var _querys_conversation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./querys/conversation */ "./src/app/querys/conversation.ts");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_10__);
+
 
 
 
@@ -633,10 +636,35 @@ let AppComponent = class AppComponent {
         this.idFace = "534334316747920";
         this.objectKeys = Object.keys;
     }
+    getChart(i) {
+        let days = [...this.days];
+        days.shift();
+        const data = [...this.Data[i]];
+        this.canvas = document.getElementById('myChart');
+        this.ctx = this.canvas.getContext('2d');
+        let myChart = new chart_js__WEBPACK_IMPORTED_MODULE_10__(this.ctx, {
+            type: 'line',
+            data: {
+                labels: days,
+                datasets: [{
+                        label: data.shift(),
+                        backgroundColor: 'rgba(191, 63, 63, 1)',
+                        borderColor: 'rgba(191, 63, 63 , 1)',
+                        data: data,
+                        fill: false,
+                    }]
+            },
+            options: {
+                responsive: false,
+                display: true
+            }
+        });
+    }
     trasnsfomData() {
         this.Data = Object(_transformations_comonGraph_transformations__WEBPACK_IMPORTED_MODULE_5__["transGraph"])(Object.assign(this.commons, this.community, this.investment, this.affinity, this.conversation), this.limit);
         this.days = this.Data[0];
         this.Data.shift();
+        this.getChart(4);
     }
     update() {
         this.getData();
@@ -1112,8 +1140,8 @@ const transGraph = (data, limit = 7, period = "DL") => {
     let end = moment__WEBPACK_IMPORTED_MODULE_1__();
     let start = moment__WEBPACK_IMPORTED_MODULE_1__().subtract(limit - 1, 'days');
     while (start <= end) {
-        days.push(start.format("MM/DD/YYYY"));
-        start = start.add(1, 'days');
+        days.push(end.format("MM/DD/YYYY"));
+        end = end.subtract(1, 'days');
     }
     result[0] = days;
     for (const key in data) {
