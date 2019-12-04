@@ -860,6 +860,10 @@ query{
           date
           value
         }
+        stories(limit:${limit} period: ${period}){
+          date
+          value
+        }
         postPerformanceRatio(limit:${limit} period: ${period}){
           date
           value
