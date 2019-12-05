@@ -1070,10 +1070,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
                 var dates = days.slice();
                 var actualy = 0;
                 var prev = 0;
-                var numDay = moment__WEBPACK_IMPORTED_MODULE_1__().weekday();
-                var monday = moment__WEBPACK_IMPORTED_MODULE_1__().subtract(numDay - 1, "days").format("MM/DD/YYYY");
-                var lastMonday = moment__WEBPACK_IMPORTED_MODULE_1__(monday, "MM/DD/YYYY").subtract(1, "weeks").format("MM/DD/YYYY");
-                var lastNumDay = moment__WEBPACK_IMPORTED_MODULE_1__(lastMonday, "MM/DD/YYYY").add(numDay - 1, "days").format("MM/DD/YYYY");
+                //let numDay = moment().weekday()
+                //let monday = moment().subtract(numDay-1,"days").format("MM/DD/YYYY")
+                //let lastMonday = moment(monday,"MM/DD/YYYY").subtract(1,"weeks").format("MM/DD/YYYY")
+                //let lastNumDay =moment(lastMonday,"MM/DD/YYYY").add(numDay-1,"days").format("MM/DD/YYYY")
+                var numDay = moment__WEBPACK_IMPORTED_MODULE_1__().format("MM/DD/YYYY");
+                var monday = moment__WEBPACK_IMPORTED_MODULE_1__().subtract(6, "days").format("MM/DD/YYYY");
+                var lastMonday = moment__WEBPACK_IMPORTED_MODULE_1__(monday, "MM/DD/YYYY").subtract(6, "days").format("MM/DD/YYYY");
+                var lastNumDay = moment__WEBPACK_IMPORTED_MODULE_1__(monday, "MM/DD/YYYY").subtract(1, "days").format("MM/DD/YYYY");
                 data.shift();
                 dates.shift();
                 dates.map(function (el, index) {
@@ -1084,8 +1088,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
                         prev += data[index];
                     }
                     if (index == data.length - 1) {
-                        prev = prev / numDay;
-                        actualy = actualy / numDay;
+                        prev = prev / 7;
+                        actualy = actualy / 7;
                     }
                 });
                 return parseFloat((((actualy * 100) / prev) - 100).toFixed(2));
