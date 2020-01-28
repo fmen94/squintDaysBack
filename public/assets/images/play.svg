@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>play</title>
+    <desc>Created with Sketch.</desc>
+    <g id="apps" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BENCH-apps-completo-Copy" transform="translate(-586.000000, -825.000000)">
+            <g id="play" transform="translate(586.000000, 825.000000)">
+                <circle id="Oval" fill="#000000" opacity="0.575730097" cx="12" cy="12" r="12"></circle>
+                <path d="M13.9472136,7.89442719 L17.6381966,15.2763932 C17.7616912,15.5233825 17.6615791,15.823719 17.4145898,15.9472136 C17.3451621,15.9819275 17.2686056,16 17.190983,16 L9.80901699,16 C9.53287462,16 9.30901699,15.7761424 9.30901699,15.5 C9.30901699,15.4223775 9.32708954,15.3458209 9.3618034,15.2763932 L13.0527864,7.89442719 C13.176281,7.64743794 13.4766175,7.54732577 13.7236068,7.67082039 C13.8203705,7.71920224 13.8988317,7.79766349 13.9472136,7.89442719 Z" id="Triangle" fill="#FFFFFF" transform="translate(13.500000, 11.500000) rotate(-270.000000) translate(-13.500000, -11.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

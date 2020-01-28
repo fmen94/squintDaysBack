@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="106px" height="114.667px" viewBox="0 0 106 114.667" enable-background="new 0 0 106 114.667" xml:space="preserve">
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M19.666,55.479c0,19.224,15.584,34.807,34.808,34.807c19.223,0,34.807-15.583,34.807-34.807
+			c0-19.223-15.584-34.807-34.807-34.807C35.25,20.672,19.666,36.256,19.666,55.479"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-133.1326" y1="349.0836" x2="-132.1326" y2="349.0836" gradientTransform="matrix(0 69.6146 69.6146 0 -24246.834 9288.6406)">
+		<stop  offset="0" style="stop-color:#6BABFB"/>
+		<stop  offset="0.05" style="stop-color:#6BABFB"/>
+		<stop  offset="1" style="stop-color:#3B61F2"/>
+	</linearGradient>
+	<rect x="19.666" y="20.672" clip-path="url(#SVGID_2_)" fill="url(#SVGID_3_)" width="69.615" height="69.614"/>
+</g>
+<path fill="#FFFFFF" d="M74.777,57.061c0-2.021-0.679-2.599-1.416-3.178c0.407-0.675,1.323-1.908,1.323-3.14
+	c0-3.077-2.884-3.994-7.338-3.965c-4.24,0.028-7.88,0.933-7.88,0.933c0.235-1.321,1.972-5.148,1.972-6.428
+	c0-2.657-0.634-5.961-3.069-7.267c-0.72-0.385-1.324-0.581-2.241-0.581c-1.403,0-2.331,0.575-2.665,0.937
+	c-0.208,0.226-0.264,0.971-0.241,1.281l0.443,5.019c0,4.029-6.153,8.951-6.153,14.752v12.057c0,2.142,2.877,3.662,7.022,3.662
+	h11.434c2.989,0,3.665-0.524,4.437-1.925c0.604-1.098,0.448-2.003-0.06-2.915c1.171-0.369,2.493-1.63,2.819-3.253
+	c0.21-1.052-0.034-1.925-0.376-2.575C73.816,59.909,74.777,59.082,74.777,57.061 M37.408,50.13h3.578
+	c1.681,0,3.045,1.363,3.045,3.046v16.662c0,1.682-1.364,3.046-3.045,3.046h-3.578c-1.682,0-3.046-1.364-3.046-3.046V53.176
+	C34.362,51.493,35.726,50.13,37.408,50.13"/>
+</svg>
